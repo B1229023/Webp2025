@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas Tree</title>
+</head>
+<body>
+    <h1>Open Console to See the Christmas Tree 🎄</h1>
+    <!--<script src="scripts.js"></script>-->
+    <script>
+        function tree(n) {
+            printTreeTop(n);
+            printTreeBottom(n);
+        }
+
+        function printTreeTop(n) {
+            for (let i = 0; i < n; i++) {
+                console.log(repeatchar(n - i - 1, ' ') + repeatchar(2 * i + 1, '*'));
+            }
+        }
+
+        function printTreeBottom(n) {
+            for (let i = 0; i < 3; i++) {
+                console.log(repeatchar(n - 1, ' ') + '*');
+            }
+        }
+
+        function repeatchar(n, char) {
+            return char.repeat(n);
+        }
+        tree(4);
+    </script>
+</body>
+</html>
